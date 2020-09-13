@@ -1,4 +1,4 @@
 sim-fbm
 ======
 
-Code to simulate the fractional Brownian motion (fBm) in C.
+Code to simulate the fractional Brownian motion (fBm) in C using GSL.
