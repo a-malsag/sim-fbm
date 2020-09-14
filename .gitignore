@@ -1,0 +1,16 @@
+# Object files
+*.o
+*.ko
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Executables
+*.exe
+*.out
+
+# Debug files
+*.dSYM/

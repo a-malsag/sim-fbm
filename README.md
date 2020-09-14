@@ -1,4 +1,4 @@
-sim-fbm
+simBm
 ======
 
-Code to simulate the fractional Brownian motion (fBm) in C using GSL.
+Code to simulate the fractional and multifractional Brownian motion (fBm and mBm) in C using Circulant Embedding.
