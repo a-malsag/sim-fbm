@@ -1,6 +1,6 @@
-P=simbm
-OBJECTS=
-CFLAGS= -Wall -g -O3
+P=test_simbm
+OBJECTS= simbm.o
+CFLAGS= -Wall -g -O3 -DMODELONE_LIB
 LDLIBS= `pkg-config --libs gsl`
 CC=gcc
 

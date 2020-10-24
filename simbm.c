@@ -6,7 +6,7 @@
 #define REAL(z,i) ((z)[2*(i)])
 #define IMAG(z,i) ((z)[2*(i)+1])
 
-int main (int argc, char *argv[])
+int calc_fft()
 {
   int i = 0; 
   double data[2*64];
@@ -43,3 +43,10 @@ int main (int argc, char *argv[])
 
   return 0;
 }
+
+#ifndef MODELONE_LIB
+int main()
+{
+    calc_fft();
+}
+#endif
