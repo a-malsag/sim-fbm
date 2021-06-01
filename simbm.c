@@ -2,6 +2,8 @@
 #include <math.h>
 #include <gsl/gsl_errno.h>
 #include <gsl/gsl_fft_complex.h>
+#include <gsl/gsl_rng.h>
+#include <gsl/gsl_randist.h>
 
 #define REAL(z,i) ((z)[2*(i)])
 #define IMAG(z,i) ((z)[2*(i)+1])
@@ -43,6 +45,31 @@ int calc_fft()
 
   return 0;
 }
+
+int random_nums()
+{
+    const gsl_rng_type *T;
+    gsl_rng *r;
+
+    int i = 0, n = 100;
+
+    gsl_rng_env_setup();
+
+    T = gsl_rng_default;
+    r = gsl_rng_alloc(T);
+
+    for (i = 0; i < n; i++)
+    {
+        double x = gsl_ran_gaussian(r, 1);
+        printf("%.5f\n", x);
+    }
+
+    gsl_rng_free(r);
+
+    return 0;
+
+}
+
 
 #ifndef MODELONE_LIB
 int main()
